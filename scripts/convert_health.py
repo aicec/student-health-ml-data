@@ -38,6 +38,8 @@ def grade_group(r):
 
 
 def exercise(r):
+    """초등은 예/아니오, 중고등은 4단계로 물어서 두 묶음을 '주 3일 이상 / 미만' 두 값으로 맞춘다
+    (그대로 두면 답 모양만 보고 초4를 알아맞혀 버린다)."""
     if r["학교급"] == "초":
         v = r.get("주3회이상운동")
         if v == 1:
@@ -45,7 +47,12 @@ def exercise(r):
         if v == 2:
             return "주 3일 미만"
         return None
-    return EX_MID.get(r.get("하루30분이상운동"))
+    v = r.get("하루30분이상운동")
+    if v in (1, 2):
+        return "주 3일 미만"
+    if v in (3, 4):
+        return "주 3일 이상"
+    return None
 
 
 def main():
