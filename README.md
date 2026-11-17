@@ -14,10 +14,9 @@ Orange **File** 위젯 → URL 칸:
 https://raw.githubusercontent.com/aicec/student-health-ml-data/main/student_health_3000.csv
 ```
 
-## 열 사전 (21열)
+## 열 사전 (20열 · 숨긴 500명 파일에는 맨 앞에 「번호」가 있음)
 | 열 | 형 | 값 · 단위 | 비고 |
 |---|---|---|---|
-| 번호 | 번호 | 1 ~ 3000 | Orange에서 meta로 |
 | 학년군 | 범주 | 초4 · 중1 · 고1 | 분류 과제 정답(2일차) |
 | 성별 | 범주 | 남 · 여 | 대회 정답(4일차) |
 | 도시규모 | 범주 | 대/중소도시 · 읍지역 · 면/도서벽지 | |

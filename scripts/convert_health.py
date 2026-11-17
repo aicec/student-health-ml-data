@@ -96,7 +96,6 @@ def main():
         hidden.append(sub.iloc[idx[n_train:n_train + n_hid]])
     train = pd.concat(parts).sample(frac=1, random_state=a.seed).reset_index(drop=True)
     hid = pd.concat(hidden).sample(frac=1, random_state=a.seed + 1).reset_index(drop=True)
-    train.insert(0, "번호", range(1, len(train) + 1))
     hid.insert(0, "번호", range(1, len(hid) + 1))
 
     pub = HERE / "public"; prv = HERE / "private"
